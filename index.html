@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> 
+    <title>Calculo de Amortización</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-12 col-sm-8 col-lg-5">
+                <h2 class="h2"> Calculadora de amortización de modalidad de cuota fija y variable</h2>
+                <div class="form-group mt-2 mb-1">
+                    <label for="monto">Monto</label>
+                    <input type="text" class="form-control" id="monto" placeholder="Ingresar monto">
+                </div>
+                <div class="form-group mt-1 mb-1">
+                    <label for="periodos">Periodos</label>
+                    <input type="number" class="form-control" id="periodos" placeholder="Ingresar número de periodos" min="1" value="1">
+                </div>
+                <div class="form-group mt-1 mb-3">
+                    <label for="interes">Tasa de Interés Mensual %</label>
+                    <input type="text" class="form-control" id="interes" placeholder="Ingresar tasa de interés mensual">
+                </div>
+                <div class="form-group mt-2 mb-3 alert alert-danger" hidden id="alert-error">
+                    ¡Se seben llenar todos los campos!
+                </div>
+                <button type="button" class="btn btn-primary" id="btnCalcularf">Cuotas fijas</button> 
+                <button type="button" class="btn btn-primary" id="btnCalcularv">Cuotas variables</button>
+            </div>
+            <div class="col-12 col-sm-12 col-lg-6">
+                <table id="lista-tabla" class="table">
+                    <thead>
+                        <tr>
+                            <th>Periodos</th>
+                            <th>Saldo</th>
+                            <th>Cuota</th>
+                            <th>Intereses</th>
+                            <th>Amortización</th>                        
+                            
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+ 
+    <script src="js/cuotas.js"></script>
+
+</body>
+
+</html>
